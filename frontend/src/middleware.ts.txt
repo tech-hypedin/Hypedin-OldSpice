@@ -1,0 +1,75 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { jwtVerify, type JWTPayload } from 'jose';
+
+const ROUTE_ROLES: Record<string, string[]> = {
+	'/admin':      ['Admin'],
+	'/dashboard':  ['Ambassador']
+}
+
+const LOGIN_PAGE    = '/login';
+const UNAUTH_PAGE   = '/unauthorized';
+
+export async function middleware(req: NextRequest) {
+	const { pathname } = req.nextUrl;
+
+  	const requiredRoles = getRequiredRoles(pathname);
+  
+	if (!requiredRoles) return NextResponse.next();
+
+  	const token = req.cookies.get('token')?.value;
+
+  	if (!token) {
+    	return redirectTo(req, LOGIN_PAGE);
+  	}
+
+  	try {
+    	const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+    	const { payload } = await jwtVerify(token, secret) as { payload: JWTPayload & { role?: string } };
+
+    	const userRole = payload.role;
+
+    	if (!userRole || !requiredRoles.includes(userRole)) {
+      		return redirectTo(req, UNAUTH_PAGE);
+    	}
+
+    	const response = NextResponse.next();
+    	response.headers.set('x-user-role', userRole);
+    
+		return response;
+	} catch {
+    	const response = redirectTo(req, LOGIN_PAGE);
+
+    	response.cookies.delete('token');
+    
+		return response;
+  	}
+}
+
+function getRequiredRoles(pathname: string): string[] | null {
+	for (const [prefix, roles] of Object.entries(ROUTE_ROLES)) {
+    	if (pathname === prefix || pathname.startsWith(prefix + '/')) {
+      		return roles;
+    	}
+  	}
+  	
+	return null;
+}
+
+function redirectTo(req: NextRequest, destination: string) {
+	const url = req.nextUrl.clone();
+  
+	url.pathname = destination;
+  
+	if (destination === LOGIN_PAGE) {
+    	url.searchParams.set('from', req.nextUrl.pathname);
+  	}
+  
+	return NextResponse.redirect(url);
+}
+
+export const config = {
+	matcher: [
+    	'/admin/:path*',
+    	'/dashboard/:path*',
+  	]
+}
