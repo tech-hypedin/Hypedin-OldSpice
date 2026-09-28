@@ -5,16 +5,21 @@ function Rewards() {
       category: 'Rewards',
       desc: 'Climb the leaderboard with your content and compete for your share of the massive ₹4 Lakh prize pool.',
     },
-    {
-      title: 'Official Old Spice Creator',
-      category: 'Brand Collaboration',
-      desc: 'Get direct product drops and gain an opportunity to shoot official content for one of the world’s most iconic fragrance brands.',
-    },
+    // {
+    //   title: 'Create Content for a Global Icon',
+    //   category: 'Brand Collaboration',
+    //   desc: 'Opportunity to create content for global brand',
+    // },
     {
       title: 'Showcase Your Talent',
       category: 'Creative Stage',
       desc: 'A dedicated platform to push your creative boundaries, hone your Reel-making skills, and get your work noticed by thousands.',
     },
+    {
+      title: 'Official Instagram Feature',
+      category: 'Brand Recognition',
+      desc: 'The top performing reels stands a chance to be featured with Old Spice Instagram handle.',
+    }
   ];
 
   return (
