@@ -60,12 +60,8 @@ const navigation: { text: string, path: string }[] = [
         path: '/apply',
     },
     {
-        text: 'TERMS OF SWAGGER',
-        path: '/terms',
-    },
-    {
-        text: 'PRIVACY DIRECTIVE',
-        path: '/privacy',
+        text: 'TERMS & CONDITIONS',
+        path: '/terms&conditions',
     },
 ]
 
