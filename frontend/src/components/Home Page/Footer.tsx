@@ -35,15 +35,11 @@ const socials: { name: string, icon: React.ReactNode, link: string }[] = [
     {
         name: 'YouTube',
         icon: <YoutubeIcon className='w-5 h-5' />,
-        link: 'https://www.youtube.com/@OldSpice',
+        link: 'https://www.youtube.com/c/OldSpiceIndia',
     },
 ]
 
 const operations: { text: string, path: string }[] = [
-    {
-        text: 'About the Program',
-        path: '/#mission',
-    },
     {
         text: 'Program Roadmap',
         path: '/#roadmap',
@@ -61,7 +57,7 @@ const operations: { text: string, path: string }[] = [
 const navigation: { text: string, path: string }[] = [
     {
         text: 'ENLIST NOW',
-        path: '/application',
+        path: '/apply',
     },
     {
         text: 'TERMS OF SWAGGER',
