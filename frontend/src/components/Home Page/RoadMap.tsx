@@ -22,7 +22,7 @@ function RoadMap() {
     {
       step: '04',
       title: 'Get Rewarded',
-      desc: 'Get recognized, earn your campaign rewards, and feature across official campaign channels upon submission.',
+      desc: 'Get recognized, earn your rewards, and feature across channels upon submission.',
     },
   ];
 
