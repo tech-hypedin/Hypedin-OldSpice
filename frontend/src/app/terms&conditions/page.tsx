@@ -869,14 +869,14 @@ export default function TermsAndConditions() {
       `}</style>
 
       {/* Hero Header Area */}
-      <header className="relative pt-16 pb-12 sm:pt-20 sm:pb-14 bg-white border-b border-gray-100">
+      <header className="relative pt-16 pb-12 sm:pt-10 sm:pb-14 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             
             {/* Pill Badge matched to landing page screenshot */}
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#FCE8EC] text-[#C40D2E] text-xs font-extrabold uppercase tracking-widest mb-6">
+            {/* <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#FCE8EC] text-[#C40D2E] text-xs font-extrabold uppercase tracking-widest mb-6">
               LEGAL AGREEMENT
-            </div>
+            </div> */}
 
             {/* Title styled after hero banner typography */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#111111] leading-tight">
@@ -888,11 +888,11 @@ export default function TermsAndConditions() {
             </p>
 
             <div className="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500 font-bold uppercase tracking-wider">
-              <span>Organiser: HYPEDIN</span>
+              <span>Partner Agency: HYPEDIN</span>
               <span>•</span>
               <span>Brand: Old Spice</span>
               <span>•</span>
-              <span>Effective Date: 2026</span>
+              <span>Effective Date: September 29, 2026</span>
             </div>
 
           </div>
