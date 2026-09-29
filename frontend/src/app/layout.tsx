@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'Old Spice Campus Legend Program',
-	description: 'Become the official face of Old Spice on your campus. Smell like a champion.'
+	title: 'Old Spice Creator Program',
+	description: 'Become a creator for Old Spice Creator Program. Smell like a champion.'
 }
 
 function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
