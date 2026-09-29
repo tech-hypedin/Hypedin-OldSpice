@@ -77,12 +77,12 @@ function Footer() {
                               <Image src='/oldspice.png' height={40} width={130} alt='Old Spice Logo' className='h-10 w-auto object-contain'/>
                             </div>
                             <span className='text-xl font-secondary text-background tracking-tighter uppercase'>
-                              CAMPUS CAPTAINS
+                              CREATORS
                             </span>
                         </Link>
 
                         <p className='text-background/70 max-w-xs sm:max-w-sm leading-relaxed mb-10 font-normal uppercase text-xs md:text-sm tracking-wide'>
-                          Banishing the stench of library all-nighters. Join the official collegiate vanguard and command legendary freshness across your university.
+                          Banish the stench of all-nighters. Join the official Old Spice Creator Program and become part of a bold community of creators, bringing legendary freshness, unforgettable content, and Old Spice energy to your audience.
                         </p>
 
                         <div className='flex gap-4'>
@@ -127,7 +127,7 @@ function Footer() {
 
                 <div className='pt-10 border-t border-[#1f1f1f] flex flex-col sm:flex-row justify-between items-center gap-4'>
                     <p className='text-center sm:text-left text-[10px] md:text-xs font-bold text-[#8C8C8C] uppercase tracking-[0.25em]'>
-                        Old Spice Campus Captains Program • Procter & Gamble
+                        Old Spice Creator Program • Procter & Gamble
                     </p>
                     <p className='text-center sm:text-right text-[10px] md:text-xs font-bold text-[#8C8C8C] uppercase tracking-[0.25em]'>
                         © {new Date().getFullYear()} All Rights Reserved. Smell Like A Legend.
