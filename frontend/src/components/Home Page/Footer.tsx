@@ -82,7 +82,7 @@ function Footer() {
                         </Link>
 
                         <p className='text-background/70 max-w-xs sm:max-w-sm leading-relaxed mb-10 font-normal uppercase text-xs md:text-sm tracking-wide'>
-                          Banish the stench of all-nighters. Join the official Old Spice Creator Program and become part of a bold community of creators, bringing legendary freshness, unforgettable content, and Old Spice energy to your audience.
+                          Banish the stench of all-nighters. Join the Old Spice Creator Program and become part of a bold community of creators, bringing legendary freshness, unforgettable content, and Old Spice energy to your audience.
                         </p>
 
                         <div className='flex gap-4'>
