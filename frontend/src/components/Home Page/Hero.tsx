@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 function Hero() {
-  const mediaType: 'video' | 'image' = 'video';
 
   return (
     <section 
@@ -58,27 +57,17 @@ function Hero() {
           {/* Right Column: Reel Frame */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[9/16] rounded-[2.5rem] overflow-hidden border-4 border-neutral-200/80 bg-neutral-950 shadow-2xl ring-1 ring-black/5 group">
-              {mediaType === 'video' ? (
-                <video 
+
+              <video 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   autoPlay 
                   loop 
                   muted 
                   playsInline 
-                  poster="https://placehold.co/800x1000/AF000F/ffffff?text=Old+Spice+Captain+PlaceHolder"
                 >
                   <source src="/OldSpiceHeroVideo.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              ) : (
-                <div className="relative w-full h-full">
-                  <img 
-                    src="https://placehold.co/800x1000/ffffff/AF000F?text=Old+Spice+Creator" 
-                    alt="Old Spice Creator Hero" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-              )}
             </div>
           </div>
 
