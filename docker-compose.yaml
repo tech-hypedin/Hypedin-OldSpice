@@ -1,3 +1,20 @@
+# services:
+#   frontend:
+#     build:
+#       context: ./frontend
+#       dockerfile: Dockerfile
+#     container_name: oldspice-frontend
+#     restart: unless-stopped
+#     expose:
+#       - "3000"
+#     networks:
+#       - oldspice-network
+
+# networks:
+#   oldspice-network:
+#     name: oldspice-network
+
+
 services:
   frontend:
     build:
@@ -12,4 +29,5 @@ services:
 
 networks:
   oldspice-network:
+    external: true
     name: oldspice-network
